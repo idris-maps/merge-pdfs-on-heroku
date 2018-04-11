@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/tape/bin/tape test/**/*.spec.js | tap-spec",
-    "postinstall": "npm install"
+    "test": "node_modules/tape/bin/tape test/**/*.spec.js | tap-spec"
+  },
+  "engines": {
+    "node": "^8.x"
   },
   "keywords": [],
   "author": "",
