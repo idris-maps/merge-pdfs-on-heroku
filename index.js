@@ -9,6 +9,7 @@ const app = express()
 
 app.use(bodyParser.json())
 
+app.get('/', (req, res) => res.status(200).json({msg: 'hello'}))
 
 app.post('/', (req, res) => {
   const pdfUrls = req.body.pdfUrls
