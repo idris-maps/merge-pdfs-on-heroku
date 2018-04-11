@@ -15,11 +15,9 @@ app.post('/', (req, res) => {
   if (!pdfUrls || !Array.isArray(pdfUrls)) {
     return res.status(400).json({ message: 'NO "pdfUrls" IN BODY' })
   }
-  getPdfs(pdfUrls)
+  return getPdfs(pdfUrls)
     .then(merge)
-    .then(buffer => {
-      res.status(200).json(buffer)
-    })
+    .then(buffer => res.status(200).json(buffer))
 })
 
 app.listen(env.port, () => {
