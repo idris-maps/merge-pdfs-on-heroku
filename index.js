@@ -17,7 +17,7 @@ app.post('/', (req, res) => {
   }
   return getPdfs(pdfUrls)
     .then(merge)
-    .then(buffer => res.status(200).json(buffer))
+    .then(buffer => res.status(200).send(buffer))
 })
 
 app.listen(process.env.PORT, () => {
