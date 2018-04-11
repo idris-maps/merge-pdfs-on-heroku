@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/tape/bin/tape test/**/*.spec.js | tap-spec"
+    "test": "node_modules/tape/bin/tape test/**/*.spec.js | tap-spec",
+    "postinstall": "npm install"
   },
   "keywords": [],
   "author": "",

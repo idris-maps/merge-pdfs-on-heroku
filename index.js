@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const env = require('./lib/env')
 const getPdfs = require('./lib/getPdfBuffers')
 const merge = require('./lib/mergePdfs')
 
@@ -21,6 +20,6 @@ app.post('/', (req, res) => {
     .then(buffer => res.status(200).json(buffer))
 })
 
-app.listen(env.port, () => {
-  console.log(`Listening on ${env.port}`)
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on ${process.env.PORT}`)
 })
